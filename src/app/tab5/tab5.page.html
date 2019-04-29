@@ -1,0 +1,12 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Perfil
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <h1 *ngIf="afAuth.auth.currentUser">Bem vindo {{afAuth.auth.currentUser.displayName}}</h1>
+  <ion-button *ngIf="afAuth.auth.currentUser" (click)="SignOut()">Sair</ion-button>
+</ion-content>

@@ -1,0 +1,62 @@
+<ion-content>
+  <ion-slides pager="true" *ngIf="!afAuth.auth.currentUser">
+    <ion-slide class="step-one">
+      <div class="bottom_page">
+        <h1>Encontrando um amigo</h1>
+        <p>Nós vamos ajudá-lo a fazer um Pet feliz, ele ganha um lar e você um novo amigo!</p>
+      </div>
+    </ion-slide>
+
+    <ion-slide class="step-two">
+      <div class="bottom_page">
+        <h1>Doação</h1>
+        <p>Para cada Pet feliz, você ganha pontos que podem ser doados.</p>
+      </div>
+    </ion-slide>
+
+    <ion-slide class="step-three">
+      <div>
+        <img src="/assets/slides/logo.svg" alt="" class="logo_login linha" />
+        <div class="linha">
+          <h1>PetsGo</h1>
+          <p>Salvando vidas e fazendo amigos</p>
+        </div>
+      </div>
+
+      <div>
+        <firebase-ui></firebase-ui>
+      </div>
+    </ion-slide>
+  </ion-slides>
+</ion-content>
+
+<ion-tabs *ngIf="afAuth.auth.currentUser">
+
+  <ion-tab-bar slot="bottom">
+    <ion-tab-button tab="tab1">
+      <ion-icon name="md-search"></ion-icon>
+      <ion-label>Busca de Pets</ion-label>
+    </ion-tab-button>
+
+    <ion-tab-button tab="tab2">
+      <ion-icon name="md-heart"></ion-icon>
+      <ion-label>Favoritos</ion-label>
+    </ion-tab-button>
+
+    <ion-tab-button tab="tab3">
+      <ion-icon name="md-add-circle"></ion-icon>
+      <ion-label>Adicionar</ion-label>
+    </ion-tab-button>
+
+    <ion-tab-button tab="tab4">
+      <ion-icon name="md-chatbubbles"></ion-icon>
+      <ion-label>Chat</ion-label>
+    </ion-tab-button>
+
+    <ion-tab-button tab="tab5">
+      <ion-icon name="md-contact"></ion-icon>
+      <ion-label>Perfil</ion-label>
+    </ion-tab-button>
+  </ion-tab-bar>
+
+</ion-tabs>
