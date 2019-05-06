@@ -15,6 +15,8 @@ import {AngularFireModule} from '@angular/fire';
 import {AngularFireAuthModule} from '@angular/fire/auth';
 import { environment } from 'src/environments/environment';
 
+import { HttpClientModule } from '@angular/common/http';
+
 const firebaseUiAuthConfig: firebaseui.auth.Config = {
   signInFlow: 'popup',
   signInOptions: [
@@ -30,7 +32,8 @@ const firebaseUiAuthConfig: firebaseui.auth.Config = {
         'auth_type': 'reauthenticate'
       },
       provider: firebase.auth.FacebookAuthProvider.PROVIDER_ID
-    }
+    },
+    firebase.auth.TwitterAuthProvider.PROVIDER_ID
   ],
   tosUrl: '/terms',
   privacyPolicyUrl: '/privacy',
@@ -45,7 +48,8 @@ const firebaseUiAuthConfig: firebaseui.auth.Config = {
     AppRoutingModule,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireAuthModule,
-    FirebaseUIModule.forRoot(firebaseUiAuthConfig)
+    FirebaseUIModule.forRoot(firebaseUiAuthConfig),
+    HttpClientModule
   ],
   providers: [
     StatusBar,
