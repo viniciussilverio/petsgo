@@ -8,5 +8,6 @@ export const environment = {
     storageBucket: "petsgo-1d56a.appspot.com",
     messagingSenderId: "393027674647"
   },
-  backend: "http://localhost:9910"
+  /* backend: "http://localhost:9910" */
+  backend: "https://petsgobackendapp.mybluemix.net"
 };
