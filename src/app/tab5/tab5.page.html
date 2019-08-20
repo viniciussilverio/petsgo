@@ -7,6 +7,89 @@
 </ion-header>
 
 <ion-content>
-  <h1 *ngIf="afAuth.auth.currentUser">Bem vindo {{afAuth.auth.currentUser.displayName}}</h1>
-  <ion-button *ngIf="afAuth.auth.currentUser" (click)="SignOut()">Sair</ion-button>
+  <div class="item_list_pet box-shadow-blur center_text">
+    <br>
+    <div class="imgframe_pet"
+      [style.background-image]="'url(' + afAuth.auth.currentUser.photoURL.replace('https:','http:') + ')'">
+    </div>
+    <div class="descricao_frame">
+      <table class="detalhes_table">
+        <tr>
+          <td><strong *ngIf="afAuth.auth.currentUser">{{afAuth.auth.currentUser.displayName}}</strong></td>
+        </tr>
+        <tr>
+          <td>{{afAuth.auth.currentUser.email}}</td>
+        </tr>
+      </table>
+      <br>
+    </div>
+  </div>
+
+  Dados Pessoais
+
+  <div class="item_list_pet box-shadow-blur" *ngIf="afAuth.auth.currentUser.displayName">
+    <!-- <ion-icon name="mail"></ion-icon> -->
+    <div class="descricao_frame margin_inside">
+      <table class="detalhes_table">
+        <tr>
+          <td>Nome</td>
+        </tr>
+        <tr>
+          <td><strong>{{afAuth.auth.currentUser.displayName}}</strong></td>
+        </tr>
+      </table>
+    </div>
+  </div>
+
+
+  <div class="item_list_pet box-shadow-blur" *ngIf="afAuth.auth.currentUser.email">
+    <div class="descricao_frame margin_inside">
+      <table class="detalhes_table">
+        <tr>
+          <td>E-mail</td>
+        </tr>
+        <tr>
+          <td><strong>{{afAuth.auth.currentUser.email}}</strong></td>
+        </tr>
+      </table>
+    </div>
+  </div>
+
+
+  <div class="item_list_pet box-shadow-blur" *ngIf="afAuth.auth.currentUser.phoneNumber">
+    <div class="descricao_frame margin_inside">
+      <table class="detalhes_table">
+        <tr>
+          <td>Telefone</td>
+        </tr>
+        <tr>
+          <td><strong>{{afAuth.auth.currentUser.phoneNumber}}</strong></td>
+        </tr>
+      </table>
+    </div>
+  </div>
+
+  Configuração
+
+  <div class="item_list_pet box-shadow-blur" *ngIf="afAuth.auth.currentUser" (click)="SignOut()">
+    <div class="descricao_frame margin_inside">
+      <table class="detalhes_table">
+        <tr>
+          <td><strong *ngIf="afAuth.auth.currentUser">Meus Pets</strong></td>
+        </tr>
+      </table>
+    </div>
+  </div>
+
+
+  <div class="item_list_pet box-shadow-blur" *ngIf="afAuth.auth.currentUser" (click)="SignOut()">
+    <div class="descricao_frame margin_inside">
+      <table class="detalhes_table">
+        <tr>
+          <td><strong *ngIf="afAuth.auth.currentUser">Sair</strong></td>
+        </tr>
+      </table>
+    </div>
+  </div>
+
 </ion-content>
