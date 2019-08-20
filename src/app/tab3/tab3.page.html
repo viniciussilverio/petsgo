@@ -7,4 +7,68 @@
 </ion-header>
 
 <ion-content>
+  <ion-slides #mySlider pager="true">
+    <ion-slide class="step-one">
+      <div>
+        <div class="linha">
+          <h1>Qual Pet você quer cadastrar?</h1>
+          <p (click)="next()">Continuar</p>
+        </div>
+      </div>
+    </ion-slide>
+
+    <ion-slide class="step-two">
+      <div>
+        <div class="linha">
+          <h1>O Pet é menino ou menina?</h1>
+          <p (click)="next()">Continuar</p>
+        </div>
+      </div>
+    </ion-slide>
+
+    <ion-slide class="step-three">
+      <div>
+        <div class="linha">
+          <h1>Qual o nome do Pet?</h1>
+          <p (click)="next()">Continuar</p>
+        </div>
+      </div>
+    </ion-slide>
+
+    <ion-slide class="step-four">
+      <div>
+        <div class="linha">
+          <h1>Qual o porte do Pet?</h1>
+          <p (click)="next()">Continuar</p>
+        </div>
+      </div>
+    </ion-slide>
+
+    <ion-slide class="step-five">
+      <div>
+        <div class="linha">
+          <h1>Qual idade ele aparenta ter?</h1>
+          <p (click)="next()">Continuar</p>
+        </div>
+      </div>
+    </ion-slide>
+
+    <ion-slide class="step-six">
+      <div>
+        <div class="linha">
+          <h1>Adicione fotos bonitinhas dele</h1>
+          <p (click)="next()">Continuar</p>
+        </div>
+      </div>
+    </ion-slide>
+
+    <ion-slide class="step-seven">
+      <div>
+        <div class="linha">
+          <h1>Só mais algumas coisinhas:</h1>
+          <p>Adicionar Pet</p>
+        </div>
+      </div>
+    </ion-slide>
+  </ion-slides>
 </ion-content>
