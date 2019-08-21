@@ -12,7 +12,23 @@
       <div>
         <div class="linha">
           <h1>Qual Pet você quer cadastrar?</h1>
-          <p (click)="next()">Continuar</p>
+          <table class="center">
+            <tr>
+              <td>
+                <div class="imgframe" (click)="dog()" [ngClass]="{'img_activated' : animal === 0}" [style.background-image]="'url(/assets/dog-option.svg)'">
+                </div>
+              </td>
+              <td>
+                <div class="imgframe" (click)="cat()" [ngClass]="{'img_activated' : animal === 1}" [style.background-image]="'url(/assets/cat-option.svg)'">
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td (click)="dog()" [ngClass]="{'td_activated' : animal === 0}">Cachorro</td>
+              <td (click)="cat()" [ngClass]="{'td_activated' : animal === 1}">Gato</td>
+            </tr>
+          </table>
+          <ion-button (click)="next()">Continuar</ion-button>
         </div>
       </div>
     </ion-slide>
@@ -21,7 +37,23 @@
       <div>
         <div class="linha">
           <h1>O Pet é menino ou menina?</h1>
-          <p (click)="next()">Continuar</p>
+          <table class="center">
+            <tr>
+              <td>
+                <div class="imgframe" (click)="menino()" [ngClass]="{'img_activated' : sexo === 0}" [style.background-image]="'url(/assets/dog-option.png)'">
+                </div>
+              </td>
+              <td>
+                <div class="imgframe" (click)="menina()" [ngClass]="{'img_activated' : sexo === 1}" [style.background-image]="'url(/assets/cat-option.png)'">
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td (click)="menino()" [ngClass]="{'td_activated' : sexo === 0}">Menino</td>
+              <td (click)="menina()" [ngClass]="{'td_activated' : sexo === 1}">Menina</td>
+            </tr>
+          </table>
+          <ion-button (click)="next()">Continuar</ion-button>
         </div>
       </div>
     </ion-slide>
@@ -30,7 +62,10 @@
       <div>
         <div class="linha">
           <h1>Qual o nome do Pet?</h1>
-          <p (click)="next()">Continuar</p>
+          <ion-item class="text_input_field">
+            <ion-input placeholder="Nome o nome"></ion-input>
+          </ion-item>
+          <ion-button (click)="next()">Continuar</ion-button>
         </div>
       </div>
     </ion-slide>
@@ -39,7 +74,15 @@
       <div>
         <div class="linha">
           <h1>Qual o porte do Pet?</h1>
-          <p (click)="next()">Continuar</p>
+          <ion-item class="text_input_field">
+            <ion-label>Porte</ion-label>
+            <ion-select placeholder="Selecione">
+              <ion-select-option value="Pequeno">Pequeno</ion-select-option>
+              <ion-select-option value="Medio">Médio</ion-select-option>
+              <ion-select-option value="Grande">Grande</ion-select-option>
+            </ion-select>
+          </ion-item>
+          <ion-button (click)="next()">Continuar</ion-button>
         </div>
       </div>
     </ion-slide>
@@ -48,7 +91,15 @@
       <div>
         <div class="linha">
           <h1>Qual idade ele aparenta ter?</h1>
-          <p (click)="next()">Continuar</p>
+          <ion-item class="text_input_field">
+            <ion-label>Idade</ion-label>
+            <ion-select placeholder="Selecione">
+              <ion-select-option value="Pequeno">Idoso</ion-select-option>
+              <ion-select-option value="Medio">Adulto</ion-select-option>
+              <ion-select-option value="Grande">Filhote</ion-select-option>
+            </ion-select>
+          </ion-item>
+          <ion-button (click)="next()">Continuar</ion-button>
         </div>
       </div>
     </ion-slide>
@@ -57,7 +108,7 @@
       <div>
         <div class="linha">
           <h1>Adicione fotos bonitinhas dele</h1>
-          <p (click)="next()">Continuar</p>
+          <ion-button (click)="next()">Continuar</ion-button>
         </div>
       </div>
     </ion-slide>
@@ -66,7 +117,7 @@
       <div>
         <div class="linha">
           <h1>Só mais algumas coisinhas:</h1>
-          <p>Adicionar Pet</p>
+          <ion-button (click)="done()">Adicionar Pet</ion-button>
         </div>
       </div>
     </ion-slide>

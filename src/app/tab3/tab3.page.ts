@@ -8,19 +8,45 @@ import { IonSlides } from '@ionic/angular';
   styleUrls: ['tab3.page.scss']
 })
 export class Tab3Page {
-  constructor(public afAuth: AngularFireAuth) { }
+  animal: number;
+  sexo: number;
+  constructor(public afAuth: AngularFireAuth) {
+    this.animal = 0;
+    this.sexo = 0;
+  }
   @ViewChild('mySlider') slides: IonSlides;
+
   SignOut() {
     this.afAuth.auth.signOut().then(() => {
       location.reload();
     })
   }
-  
+
   next() {
     this.slides.slideNext();
   }
 
   prev() {
     this.slides.slidePrev();
+  }
+
+  dog() {
+    this.animal = 0;
+  }
+
+  cat() {
+    this.animal = 1;
+  }
+
+  menino() {
+    this.sexo = 0;
+  }
+
+  menina() {
+    this.sexo = 1;
+  }
+
+  done() {
+    console.log("Sending");
   }
 }
