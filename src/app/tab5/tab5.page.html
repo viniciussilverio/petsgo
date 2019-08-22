@@ -25,7 +25,11 @@
     </div>
   </div>
 
-  Dados Pessoais
+  <div class="item_list_pet">
+    <div class="descricao_frame margin_inside">
+      <strong>Dados Pessoais</strong>
+    </div>
+  </div>
 
   <div class="item_list_pet box-shadow-blur" *ngIf="afAuth.auth.currentUser.displayName">
     <!-- <ion-icon name="mail"></ion-icon> -->
@@ -69,7 +73,11 @@
     </div>
   </div>
 
-  Configuração
+  <div class="item_list_pet">
+    <div class="descricao_frame margin_inside">
+      <strong>Configuração</strong>
+    </div>
+  </div>
 
   <div class="item_list_pet box-shadow-blur" *ngIf="afAuth.auth.currentUser" (click)="SignOut()">
     <div class="descricao_frame margin_inside">

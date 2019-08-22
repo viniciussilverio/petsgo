@@ -10,6 +10,11 @@ import { IonSlides } from '@ionic/angular';
 export class Tab3Page {
   animal: number;
   sexo: number;
+  img0: any;
+  img1: any;
+  img2: any;
+  img3: any;
+
   constructor(public afAuth: AngularFireAuth) {
     this.animal = 0;
     this.sexo = 0;
@@ -48,5 +53,25 @@ export class Tab3Page {
 
   done() {
     console.log("Sending");
+  }
+
+  fileChange(event, imgNumber) {
+    if (event.target.files && event.target.files[0]) {
+      let reader = new FileReader();
+
+      reader.onload = (event: any) => {
+        this["img"+imgNumber] = event.target.result;
+      }
+      reader.readAsDataURL(event.target.files[0]);
+    }
+    let fileList: FileList = event.target.files;
+    let file: File = fileList[0];
+    /* console.log(file); */
+  }
+
+  cleanIMG(imgNumber) {
+    let doc: any = document.getElementById("fileupload" + imgNumber);
+    doc.value = "";
+    this["img" + imgNumber] = "";
   }
 }

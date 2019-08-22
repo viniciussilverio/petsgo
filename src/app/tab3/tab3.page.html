@@ -8,7 +8,7 @@
 
 <ion-content>
   <ion-slides #mySlider pager="true">
-    <ion-slide class="step-one">
+     <ion-slide class="step-one">
       <div>
         <div class="linha">
           <h1>Qual Pet você quer cadastrar?</h1>
@@ -108,15 +108,62 @@
       <div>
         <div class="linha">
           <h1>Adicione fotos bonitinhas dele</h1>
+          <table class="center">
+            <tr>
+              <td>
+                <input type="file" #fileupload0 id="fileupload0" value="" (change)="fileChange($event,0)"
+                  style="display:none">
+                <div class="image_frame_add" (click)="!img0 ? fileupload0.click() : cleanIMG(0)">
+                  <ion-icon *ngIf="!img0" name="md-add"></ion-icon><img class="img_inside" *ngIf="img0" [src]="img0" />
+                </div>
+              </td>
+              <td>
+                <input type="file" #fileupload1 id="fileupload1" value="" (change)="fileChange($event,1)"
+                  style="display:none">
+                <div class="image_frame_add" (click)="!img1 ? fileupload1.click() : cleanIMG(1)">
+                  <ion-icon *ngIf="!img1" name="md-add"></ion-icon><img class="img_inside" *ngIf="img1" [src]="img1" />
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <input type="file" #fileupload2 id="fileupload2" value="" (change)="fileChange($event,2)"
+                  style="display:none">
+                <div class="image_frame_add" (click)="!img2 ? fileupload2.click() : cleanIMG(2)">
+                  <ion-icon *ngIf="!img2" name="md-add"></ion-icon><img class="img_inside" *ngIf="img2" [src]="img2" />
+                </div>
+              </td>
+              <td>
+                <input type="file" #fileupload3 id="fileupload3" value="" (change)="fileChange($event,3)"
+                  style="display:none">
+                <div class="image_frame_add" (click)="!img3 ? fileupload3.click() : cleanIMG(3)">
+                  <ion-icon *ngIf="!img3" name="md-add"></ion-icon><img class="img_inside" *ngIf="img3" [src]="img3" />
+                </div>
+              </td>
+            </tr>
+          </table>
           <ion-button (click)="next()">Continuar</ion-button>
         </div>
       </div>
     </ion-slide>
 
     <ion-slide class="step-seven">
-      <div>
+      <div class="full_width">
         <div class="linha">
           <h1>Só mais algumas coisinhas:</h1>
+          <div class="item_list box-shadow-blur center_text">
+            <div class="descricao_frame">
+              <table class="detalhes_table">
+                <tr>
+                  <td>bbbb</td>
+                </tr>
+                <tr>
+                  <td>aaaa</td>
+                </tr>
+              </table>
+              <br>
+            </div>
+          </div>
           <ion-button (click)="done()">Adicionar Pet</ion-button>
         </div>
       </div>
