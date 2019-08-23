@@ -15,12 +15,19 @@ ion-slide {
 }
 
 .detalhes_table {
+  display: block;
   color: #9b9b9b;
   width: 100%;
 }
 
 .descricao_frame {
+  text-align: left;
   margin: 15px !important;
+}
+
+.text_title_add {
+  margin-bottom: 1px;
+  margin-left: 16px;
 }
 
 .imgframe {

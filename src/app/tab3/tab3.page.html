@@ -8,18 +8,20 @@
 
 <ion-content>
   <ion-slides #mySlider pager="true">
-     <ion-slide class="step-one">
+    <ion-slide class="step-one">
       <div>
         <div class="linha">
-          <h1>Qual Pet você quer cadastrar?</h1>
+          <h1>Qual a especie?</h1>
           <table class="center">
             <tr>
               <td>
-                <div class="imgframe" (click)="dog()" [ngClass]="{'img_activated' : animal === 0}" [style.background-image]="'url(/assets/dog-option.svg)'">
+                <div class="imgframe" (click)="dog()" [ngClass]="{'img_activated' : animal === 0}"
+                  [style.background-image]="'url(/assets/dog-option.svg)'">
                 </div>
               </td>
               <td>
-                <div class="imgframe" (click)="cat()" [ngClass]="{'img_activated' : animal === 1}" [style.background-image]="'url(/assets/cat-option.svg)'">
+                <div class="imgframe" (click)="cat()" [ngClass]="{'img_activated' : animal === 1}"
+                  [style.background-image]="'url(/assets/cat-option.svg)'">
                 </div>
               </td>
             </tr>
@@ -36,15 +38,17 @@
     <ion-slide class="step-two">
       <div>
         <div class="linha">
-          <h1>O Pet é menino ou menina?</h1>
+          <h1>É menino ou menina?</h1>
           <table class="center">
             <tr>
               <td>
-                <div class="imgframe" (click)="menino()" [ngClass]="{'img_activated' : sexo === 0}" [style.background-image]="'url(/assets/dog-option.png)'">
+                <div class="imgframe" (click)="menino()" [ngClass]="{'img_activated' : sexo === 0}"
+                  [style.background-image]="'url(/assets/dog-option.png)'">
                 </div>
               </td>
               <td>
-                <div class="imgframe" (click)="menina()" [ngClass]="{'img_activated' : sexo === 1}" [style.background-image]="'url(/assets/cat-option.png)'">
+                <div class="imgframe" (click)="menina()" [ngClass]="{'img_activated' : sexo === 1}"
+                  [style.background-image]="'url(/assets/cat-option.png)'">
                 </div>
               </td>
             </tr>
@@ -61,10 +65,35 @@
     <ion-slide class="step-three">
       <div>
         <div class="linha">
-          <h1>Qual o nome do Pet?</h1>
-          <ion-item class="text_input_field">
-            <ion-input placeholder="Nome o nome"></ion-input>
-          </ion-item>
+          <h1>Dados do Pet:</h1>
+          <div class="item_list box-shadow-blur center_text">
+            <div class="descricao_frame">
+              <table class="detalhes_table">
+                <tr>
+                  <td>
+                    <ion-icon name="md-book"></ion-icon>
+                  </td>
+                  <td>
+                    <p class="text_title_add"><strong>Descreva como encontrou o Pet:</strong></p>
+                    <ion-item>
+                      <ion-input placeholder="Descrição"></ion-input>
+                    </ion-item>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <ion-icon name="md-paw"></ion-icon>
+                  </td>
+                  <td>
+                    <p class="text_title_add"><strong>Qual o nome do Pet:</strong></p>
+                    <ion-item class="text_input_field">
+                      <ion-input placeholder="Pode inventar"></ion-input>
+                    </ion-item>
+                  </td>
+                </tr>
+              </table>
+            </div>
+          </div>
           <ion-button (click)="next()">Continuar</ion-button>
         </div>
       </div>
@@ -73,15 +102,25 @@
     <ion-slide class="step-four">
       <div>
         <div class="linha">
-          <h1>Qual o porte do Pet?</h1>
-          <ion-item class="text_input_field">
-            <ion-label>Porte</ion-label>
-            <ion-select placeholder="Selecione">
-              <ion-select-option value="Pequeno">Pequeno</ion-select-option>
-              <ion-select-option value="Medio">Médio</ion-select-option>
-              <ion-select-option value="Grande">Grande</ion-select-option>
-            </ion-select>
-          </ion-item>
+          <h1>Qual o porte?</h1>
+          <ion-list class="text_input_field">
+            <ion-radio-group>
+              <ion-item>
+                <ion-label>Pequeno</ion-label>
+                <ion-radio slot="end" value="Pequeno" checked></ion-radio>
+              </ion-item>
+
+              <ion-item>
+                <ion-label>Médio</ion-label>
+                <ion-radio slot="end" value="Medio"></ion-radio>
+              </ion-item>
+
+              <ion-item>
+                <ion-label>Grande</ion-label>
+                <ion-radio slot="end" value="Grande"></ion-radio>
+              </ion-item>
+            </ion-radio-group>
+          </ion-list>
           <ion-button (click)="next()">Continuar</ion-button>
         </div>
       </div>
@@ -90,15 +129,25 @@
     <ion-slide class="step-five">
       <div>
         <div class="linha">
-          <h1>Qual idade ele aparenta ter?</h1>
-          <ion-item class="text_input_field">
-            <ion-label>Idade</ion-label>
-            <ion-select placeholder="Selecione">
-              <ion-select-option value="Pequeno">Idoso</ion-select-option>
-              <ion-select-option value="Medio">Adulto</ion-select-option>
-              <ion-select-option value="Grande">Filhote</ion-select-option>
-            </ion-select>
-          </ion-item>
+          <h1>Qual a idade aproximada?</h1>
+          <ion-list class="text_input_field">
+            <ion-radio-group>
+              <ion-item>
+                <ion-label>Filhote</ion-label>
+                <ion-radio slot="end" value="Filhote" checked></ion-radio>
+              </ion-item>
+
+              <ion-item>
+                <ion-label>Adulto</ion-label>
+                <ion-radio slot="end" value="Adulto"></ion-radio>
+              </ion-item>
+
+              <ion-item>
+                <ion-label>Idoso</ion-label>
+                <ion-radio slot="end" value="Idoso"></ion-radio>
+              </ion-item>
+            </ion-radio-group>
+          </ion-list>
           <ion-button (click)="next()">Continuar</ion-button>
         </div>
       </div>
@@ -107,7 +156,7 @@
     <ion-slide class="step-six">
       <div>
         <div class="linha">
-          <h1>Adicione fotos bonitinhas dele</h1>
+          <h1>Adicione fotos dele</h1>
           <table class="center">
             <tr>
               <td>
@@ -155,13 +204,45 @@
             <div class="descricao_frame">
               <table class="detalhes_table">
                 <tr>
-                  <td>bbbb</td>
+                  <td>
+                    <ion-icon name="md-pin"></ion-icon>
+                  </td>
+                  <td>
+                    <ion-item>
+                      <ion-input placeholder="Onde você o encontrou?"></ion-input>
+                    </ion-item>
+                  </td>
                 </tr>
                 <tr>
-                  <td>aaaa</td>
+                  <td>
+                    <ion-icon name="md-information-circle"></ion-icon>
+                  </td>
+                  <td>
+                    <ion-item class="text_input_field">
+                      <ion-label>Situação:</ion-label>
+                      <ion-select placeholder="Selecione">
+                        <ion-select-option value="Pequeno">Adoção</ion-select-option>
+                        <ion-select-option value="Medio">Perdido</ion-select-option>
+                      </ion-select>
+                    </ion-item>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <ion-icon name="md-heart"></ion-icon>
+                  </td>
+                  <td>
+                    <ion-item class="text_input_field">
+                      <ion-label>O Pet já foi:</ion-label>
+                      <ion-select placeholder="Selecione" multiple>
+                        <ion-select-option value="Castrado">Castrado</ion-select-option>
+                        <ion-select-option value="Vacinado">Vacinado</ion-select-option>
+                        <ion-select-option value="Vermifugado">Vermifugado</ion-select-option>
+                      </ion-select>
+                    </ion-item>
+                  </td>
                 </tr>
               </table>
-              <br>
             </div>
           </div>
           <ion-button (click)="done()">Adicionar Pet</ion-button>
