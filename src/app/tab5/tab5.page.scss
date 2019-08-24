@@ -36,7 +36,6 @@
 
 .detalhes_table {
   color: #9b9b9b;
-  width: 100%;
 }
 
 .nome_animal {
@@ -47,6 +46,22 @@
   text-align: center;
 }
 
-.margin_inside {
-    padding: 10px;
+.my_icon {
+  color: #9575cd;
+  font-size: 30px;
+}
+
+.icon_size_td {
+  width: 45px;
+  vertical-align: middle;
+  text-align: center;
+}
+
+.full_space {
+  width: 100%;
+}
+
+.extra_padding {
+  padding-top: 10px;
+  padding-bottom: 10px;
 }

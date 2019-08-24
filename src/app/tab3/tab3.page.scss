@@ -15,18 +15,19 @@ ion-slide {
 }
 
 .detalhes_table {
-  display: block;
   color: #9b9b9b;
   width: 100%;
 }
 
 .descricao_frame {
+  padding-bottom: 10px;
   text-align: left;
   margin: 15px !important;
 }
 
 .text_title_add {
-  margin-bottom: 1px;
+  margin-bottom: 0px;
+  margin-top: 5px;
   margin-left: 16px;
 }
 
@@ -51,12 +52,7 @@ ion-slide {
 table.center {
   margin-left: auto;
   margin-right: auto;
-  margin-bottom: 20px;
-}
-
-.text_input_field {
-  margin: 10px;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 
 .image_frame_add {
@@ -77,4 +73,12 @@ table.center {
 
 .full_width {
   width: 100%;
+}
+
+.multiple-size {
+  max-width: calc(100vw - 210px);
+}
+
+.list-ios {
+  margin-bottom: 15px;
 }
