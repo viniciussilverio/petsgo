@@ -1,23 +1,23 @@
-<mxfile modified="2019-11-28T23:36:18.784Z" host="www.draw.io" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.108 Safari/537.36" etag="dBPhGM3h4mgLgxLueF6s" version="12.3.3" type="github" pages="1">
+<mxfile modified="2019-12-10T00:17:13.067Z" host="www.draw.io" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.108 Safari/537.36" etag="sSmT_ri27TM6vzmWFOEG" version="12.3.9" type="github" pages="1">
   <diagram id="b7IKxuHRr2_Voddetryc" name="PÃÂ¡gina-1">
-    <mxGraphModel dx="1773" dy="517" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1773" dy="516" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0"/>
         <mxCell id="1" parent="0"/>
-        <mxCell id="shlpxHYWHRnBp2qFNU5I-1" value="Adotante&lt;br&gt;/&lt;br&gt;Doador&lt;br&gt;" style="shape=umlActor;verticalLabelPosition=bottom;labelBackgroundColor=#ffffff;verticalAlign=top;html=1;outlineConnect=0;" parent="1" vertex="1">
+        <mxCell id="shlpxHYWHRnBp2qFNU5I-1" value="Adotante&lt;br&gt;/&lt;br&gt;Cuidador" style="shape=umlActor;verticalLabelPosition=bottom;labelBackgroundColor=#ffffff;verticalAlign=top;html=1;outlineConnect=0;" parent="1" vertex="1">
           <mxGeometry x="-770" y="170" width="30" height="60" as="geometry"/>
         </mxCell>
         <mxCell id="shlpxHYWHRnBp2qFNU5I-4" value="Logar&lt;br&gt;" style="ellipse;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="-520" y="40" width="140" height="60" as="geometry"/>
+          <mxGeometry x="-520" y="50" width="140" height="60" as="geometry"/>
         </mxCell>
         <mxCell id="shlpxHYWHRnBp2qFNU5I-5" value="Buscar Pet&lt;br&gt;" style="ellipse;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="-520" y="120" width="140" height="60" as="geometry"/>
         </mxCell>
-        <mxCell id="shlpxHYWHRnBp2qFNU5I-15" value="Adicionar aos Favoritos&lt;br&gt;" style="ellipse;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="-520" y="200" width="140" height="60" as="geometry"/>
+        <mxCell id="shlpxHYWHRnBp2qFNU5I-15" value="Favoritar" style="ellipse;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="-520" y="190" width="140" height="60" as="geometry"/>
         </mxCell>
         <mxCell id="shlpxHYWHRnBp2qFNU5I-16" value="Enviar mensagem" style="ellipse;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="-520" y="360" width="140" height="60" as="geometry"/>
+          <mxGeometry x="-520" y="330" width="140" height="60" as="geometry"/>
         </mxCell>
         <mxCell id="shlpxHYWHRnBp2qFNU5I-23" value="" style="endArrow=classic;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" target="shlpxHYWHRnBp2qFNU5I-16" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
@@ -49,8 +49,8 @@
             <mxPoint x="-580" y="300" as="targetPoint"/>
           </mxGeometry>
         </mxCell>
-        <mxCell id="td95CvPEebeKP2kWbkRP-2" value="Gerenciar Pet" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="-520" y="280" width="140" height="60" as="geometry"/>
+        <mxCell id="td95CvPEebeKP2kWbkRP-2" value="Gerenciar Pet" style="ellipse;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="-520" y="260" width="140" height="60" as="geometry"/>
         </mxCell>
       </root>
     </mxGraphModel>
